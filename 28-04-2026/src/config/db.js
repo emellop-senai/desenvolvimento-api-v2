@@ -3,12 +3,12 @@ import pg from 'pg'
 const { Pool } = pg
 
 const pool = new Pool({
-    host:"",
-    password:"",
-    user: "",
-    port:"",
-    database:""
+    host: process.env.DB_HOST,
+    password: process.env.DB_PASS,
+    user: process.env.DB_USER,
+    database: process.env.DB_NAME
 })
+
 
 // the pool will emit an error on behalf of any idle clients
 // it contains if a backend error or network partition happens
