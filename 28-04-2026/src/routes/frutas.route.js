@@ -5,4 +5,5 @@ export const frutasRoute = Router()
 
 frutasRoute.get("/", async (req, res) => {
     const frutas = await frutasService.getAll()
+    res.json(frutas)
 })
